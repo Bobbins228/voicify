@@ -1,0 +1,20 @@
+[build-system]
+requires = ["setuptools>=45", "wheel", "setuptools-scm[toml]>=6.2"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "voicify"
+version = "0.1.0"
+description = "Converts tts and stt"
+requires-python = ">=3.12"
+dependencies = [
+    "openai-whisper",
+    "openai",
+    "httpx"
+]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-dir]
+voice_conversion_rag = "src/voicify"
